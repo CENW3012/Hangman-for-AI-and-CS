@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hangman — GitHub Pages</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Hangman</h1>
+      <p class="muted">Hosted with GitHub Pages — put your MP3s and image in <code>/assets/</code></p>
+    </header>
+
+    <section class="game">
+      <aside class="left">
+        <div class="imageWrap">
+          <img id="hangmanImage" src="assets/hangman.png" alt="Hangman" onerror="this.style.display='none'">
+          <canvas id="hangmanCanvas" width="720" height="280" aria-hidden="true"></canvas>
+        </div>
+
+        <div class="controls">
+          <div class="control-row">
+            <button id="newGameBtn">New Game</button>
+            <button id="toggleMusicBtn" class="muted">Play/Pause Music</button>
+          </div>
+          <div class="control-row small">
+            <label>Word list: <code>words.txt</code> (optional)</label>
+          </div>
+        </div>
+      </aside>
+
+      <article class="right">
+        <div class="answerArea">
+          <div id="wordContainer" class="word" aria-live="polite"></div>
+          <div id="wrongContainer" class="small">Wrong guesses: <span id="wrongLetters">—</span></div>
+        </div>
+
+        <div id="keyboard" class="keyboard" aria-label="On-screen keyboard"></div>
+
+        <div class="status" id="statusText">Press letters on your keyboard or click the keys above.</div>
+
+        <div class="footer-controls">
+          <button id="hintBtn" class="muted">Reveal letter (penalty)</button>
+          <button id="resetBtn" class="muted">Reset</button>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <p class="muted">Place MP3 files and an image in <code>/assets/</code>. See README for deployment steps.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
