@@ -1,7 +1,7 @@
 :root{--bg:#071023;--card:#081427;--accent:#60a5fa;--muted:#94a3b8;--glass:rgba(255,255,255,0.03)}
 *{box-sizing:border-box}
 body {
-  background: url("assets/background.jpg") no-repeat center center fixed;
+  background: url("assets/background.mp4") no-repeat center center fixed;
   background-size: cover;
   font-family: "Poppins", sans-serif;
   color: white;
